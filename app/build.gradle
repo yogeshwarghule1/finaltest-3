@@ -1,0 +1,47 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    signingConfigs {
+        debug {
+            storeFile file('F:\\android-project\\tiffinSevaReleaseKeyStore')
+            storePassword '!TiffinSeva@Bbhkv^192020!'
+            keyPassword '!TiffinSeva@Bbhkv^192020!'
+            keyAlias 'tiffinSeva'
+        }
+    }
+    namespace 'org.android.tiffinseva'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "org.android.tiffinseva"
+        minSdk 33
+        targetSdk 33
+        versionCode 8
+        versionName '1.0.8'
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}

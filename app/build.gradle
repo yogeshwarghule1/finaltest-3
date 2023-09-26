@@ -7,9 +7,9 @@ apply plugin: 'com.google.firebase.crashlytics'
 
 
 
-plugins {
-    id 'com.android.application'
-}
+//plugins {
+//    id 'com.android.application'
+//}
 
 android {
     signingConfigs {
